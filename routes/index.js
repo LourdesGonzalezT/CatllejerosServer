@@ -1,4 +1,3 @@
-module.exports = app => {
-    const indexRoutes = require("./index.routes");
-    app.use("/api", indexRoutes)
-}
+const router = require("express").Router();
+router.use('/cats', require('./cats.routes'))
+module.exports = router;

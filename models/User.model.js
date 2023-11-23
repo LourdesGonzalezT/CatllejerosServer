@@ -10,13 +10,20 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true
     },
+
     password: {
       type: String,
       required: [true, 'Password is required.']
-    }
+    },
+
+    role: {
+      type: String,
+      enum: ['ADMIN', 'USER'],
+      default: 'USER'
+    },
   },
+
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`    
     timestamps: true
   }
 );
