@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const eventSchema = new Schema(
     {
-        name: {
+        eventName: {
             type: String,
             trim: true,
             required: [true, 'Por favor, indica el nombre del evento'],
@@ -13,6 +13,10 @@ const eventSchema = new Schema(
             type: Date
         },
 
+        address: {
+            type: String,
+        },
+
 
         description: {
             type: String,
@@ -20,7 +24,7 @@ const eventSchema = new Schema(
 
         },
 
-        image: {
+        eventImage: {
             type: String,
             //TODO  default: '{https://res.cloudinary.com/duewvq0qa/image/upload/v1685439940/jaagt9jzd154emhmfncj.jpg}',
         }

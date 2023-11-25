@@ -13,7 +13,9 @@ const catSchema = new Schema(
     },
 
     sex: {
-      type: Date
+      type: String,
+      required: [true, 'Por favor, indica el sexo del gatete'],
+      enum: ['macho', 'hembra'],
     },
 
     aboutCat: {

@@ -9,16 +9,15 @@ const reportSchema = new Schema(
             required: [true, 'Por favor, indica el nombre del evento'],
         },
 
-        eventDate: {
+        reportDate: {
             type: Date
         },
 
-
-        description: {
+        information: {
             type: String,
         },
 
-        image: {
+        reportImage: {
             type: String,
             //TODO  default: '{https://res.cloudinary.com/duewvq0qa/image/upload/v1685439940/jaagt9jzd154emhmfncj.jpg}',
         }
