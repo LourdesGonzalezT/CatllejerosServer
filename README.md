@@ -15,6 +15,18 @@ Website created with javascript and React for the stray cat protection associati
 | GET           | /verify       | Verify Auth token         |
 
 
+## User Routes
+
+#### Base URL /users
+
+| HTTP Method   | URI Path               | Description               |
+| :--------     | :-------               | :-------------------------|
+| POST          | /newUser               | Create new user           |
+| GET           | /getOneUser/:user_id   | Matching ID user details   |
+| GET           | /getAllUsers           | All users list             |
+| PUT           | /:user_id/edit         | Matching ID user edition   |
+| DELETE        | /:user_id/delete       | Matching ID user deletion  |
+
 ## Cat Routes
 
 #### Base URL /cats
