@@ -28,18 +28,21 @@ router.get('/getAllReports', (req, res, next) => {
 })
 
 router.put('/:report_id/edit', (req, res, next) => {
-  const { } = req.body
-  const { } = req.params
+  const { tittle, reportDate, information, reportImage } = req.body
+  const { report_id } = req.params
 
   Report
-    .findByIdAndUpdate(report_id)
+    .findByIdAndUpdate(report_id, { tittle, reportDate, information, reportImage })
     .then(response => res.json(response))
     .catch(err => next(err))
 })
 
 router.delete('/:report_id/delete', (req, res, next) => {
+
+  const { report_id } = req.params
+
   Report
-    .findByIdAndDelete(report_id, {})
+    .findByIdAndDelete(report_id)
     .then(response => res.json(response))
     .catch(err => next(err))
 })

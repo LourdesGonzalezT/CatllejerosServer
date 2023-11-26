@@ -28,15 +28,18 @@ router.get('/getAllEvents', (req, res, next) => {
 })
 
 router.put('/:event_id/edit', (req, res, next) => {
-  const { } = req.params
-  const { } = req.body
+  const { eventName, eventDate, address, description, eventImage } = req.body
+  const { event_id } = req.params
   Event
-    .findByIdAndUpdate(event_id, {})
+    .findByIdAndUpdate(event_id, { eventName, eventDate, address, description, eventImage })
     .then(response => res.json(response))
     .catch(err => next(err))
 })
 
 router.delete('/:event_id/delete', (req, res, next) => {
+
+  const { event_id } = req.params
+
   Event
     .findByIdAndDelete(event_id)
     .then(response => res.json(response))

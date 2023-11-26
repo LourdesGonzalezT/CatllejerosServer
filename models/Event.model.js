@@ -27,12 +27,14 @@ const eventSchema = new Schema(
         eventImage: {
             type: String,
             //TODO  default: '{https://res.cloudinary.com/duewvq0qa/image/upload/v1685439940/jaagt9jzd154emhmfncj.jpg}',
-        }
+        },
 
     },
     {
-        timestamps: true
-    }
+        timestamps: true,
+        versionKey: false
+    },
+
 )
 
 const Event = mongoose.model('Event', eventSchema)
