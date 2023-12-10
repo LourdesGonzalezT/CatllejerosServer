@@ -28,11 +28,11 @@ router.get('/getAllReports', (req, res, next) => {
 })
 
 router.put('/:report_id/edit', (req, res, next) => {
-  const { tittle, reportDate, information, reportImage } = req.body
+  const { title, reportDate, information, reportImage } = req.body
   const { report_id } = req.params
 
   Report
-    .findByIdAndUpdate(report_id, { tittle, reportDate, information, reportImage })
+    .findByIdAndUpdate(report_id, { title, reportDate, information, reportImage })
     .then(response => res.json(response))
     .catch(err => next(err))
 })

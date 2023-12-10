@@ -11,6 +11,7 @@ router.post('/newCat', (req, res, next) => {
 })
 
 router.get('/getOneCat/:cat_id', (req, res, next) => {
+
   const { cat_id } = req.params
 
   Cat

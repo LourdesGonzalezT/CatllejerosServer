@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const reportSchema = new Schema(
     {
-        tittle: {
+        title: {
             type: String,
             trim: true,
             required: [true, 'Por favor, indica el nombre del evento'],
