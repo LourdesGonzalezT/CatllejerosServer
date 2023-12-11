@@ -11,6 +11,7 @@ router.post('/newEvent', (req, res, next) => {
 })
 
 router.get('/getOneEvent/:event_id', (req, res, next) => {
+
   const { event_id } = req.params
 
   Event
